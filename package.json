@@ -1,0 +1,10 @@
+{
+  "name": "xtreame-store",
+  "version": "1.0.0",
+  "description": "Dynamic gaming marketplace for Free Fire IDs",
+  "scripts": {
+    "install:all": "npm install && cd server && npm install && cd ../client && npm install",
+    "dev:server": "cd server && npm run dev",
+    "dev:client": "cd client && npm start"
+  }
+}

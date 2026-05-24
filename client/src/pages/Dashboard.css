@@ -1,0 +1,117 @@
+/* ─── Dashboard v6.0 (Ultra Dark Premium Red) ────────────────────────────── */
+
+.dashboard { padding: 106px 0 88px; }
+
+.dashboard__header {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  margin-bottom: 52px;
+  padding: 36px;
+  background: rgba(10, 10, 10, 0.9);
+  border: 1px solid rgba(255, 0, 51, 0.15);
+  border-radius: var(--radius-xl);
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 30px rgba(255, 0, 51, 0.05), 0 4px 24px rgba(0,0,0,0.7);
+}
+
+.dashboard__header::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--primary), transparent);
+}
+
+.dashboard__header::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 40%; height: 100%;
+  background: linear-gradient(135deg, rgba(255, 0, 51, 0.04), transparent);
+  pointer-events: none;
+}
+
+.dashboard__avatar {
+  width: 84px; height: 84px;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-gaming);
+  font-size: 34px;
+  font-weight: 700;
+  color: #fff;
+  box-shadow: 0 0 28px rgba(255, 0, 51, 0.5), 0 8px 32px rgba(255, 0, 51, 0.3);
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.dashboard__info { position: relative; z-index: 1; }
+.dashboard__name { font-family: var(--font-gaming); font-size: 1.85rem; margin-bottom: 5px; letter-spacing: -0.5px; }
+.dashboard__email { color: var(--text-secondary); font-size: 14px; margin-bottom: 12px; font-family: var(--font-ui); font-weight: 300; }
+
+.dashboard__badge { padding: 4px 16px; border-radius: var(--radius-pill); font-size: 11px; font-family: var(--font-gaming); letter-spacing: 1.5px; display: inline-flex; align-items: center; gap: 6px; }
+
+.dashboard__badge.verified { background: rgba(0, 255, 136, 0.08); color: var(--success); border: 1px solid rgba(0, 255, 136, 0.25); }
+.dashboard__badge.verified::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--success); box-shadow: 0 0 8px var(--success); }
+.dashboard__badge.unverified { background: rgba(255, 0, 51, 0.07); color: var(--primary); border: 1px solid rgba(255, 0, 51, 0.22); }
+
+.dashboard__cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+
+.dash-card {
+  padding: 36px 28px;
+  text-align: center;
+  transition: var(--transition);
+  display: block;
+  position: relative;
+  overflow: hidden;
+  background: rgba(10, 10, 10, 0.9);
+  border: 1px solid rgba(255, 0, 51, 0.14);
+  border-radius: var(--radius-lg);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.5);
+}
+
+.dash-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--primary), transparent);
+  opacity: 0;
+  transition: opacity 0.35s;
+}
+
+.dash-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 50%;
+  background: linear-gradient(to top, rgba(255, 0, 51, 0.04), transparent);
+  opacity: 0;
+  transition: opacity 0.35s;
+  pointer-events: none;
+}
+
+.dash-card:hover { border-color: rgba(255, 0, 51, 0.35); transform: translateY(-6px); box-shadow: 0 0 50px rgba(255, 0, 51, 0.14), 0 20px 60px rgba(0,0,0,0.7); }
+.dash-card:hover::before, .dash-card:hover::after { opacity: 1; }
+
+.dash-card__icon { font-size: 38px; color: var(--primary); margin-bottom: 18px; display: block; margin-left: auto; margin-right: auto; filter: drop-shadow(0 0 10px rgba(255, 0, 51, 0.5)); transition: var(--transition); position: relative; z-index: 1; }
+.dash-card:hover .dash-card__icon { filter: drop-shadow(0 0 20px rgba(255, 0, 51, 0.9)); transform: scale(1.1); }
+
+.dash-card h3 { font-family: var(--font-gaming); font-size: 15px; margin-bottom: 8px; position: relative; z-index: 1; }
+.dash-card p  { color: var(--text-secondary); font-size: 13px; font-family: var(--font-ui); font-weight: 300; position: relative; z-index: 1; }
+
+@media (max-width: 768px) {
+  .dashboard { padding: 84px 0 64px; }
+  .dashboard__cards { grid-template-columns: 1fr; gap: 14px; }
+  .dashboard__header { flex-direction: column; text-align: center; gap: 18px; padding: 28px 22px; }
+  .dashboard__avatar { width: 68px; height: 68px; font-size: 26px; }
+  .dashboard__name { font-size: 1.5rem; }
+}

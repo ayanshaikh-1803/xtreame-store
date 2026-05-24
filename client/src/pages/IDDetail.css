@@ -1,0 +1,104 @@
+/* ─── ID Detail v6.0 (Ultra Dark Premium Red) ────────────────────────────── */
+
+.id-detail { padding: 106px 0 88px; }
+
+.back-btn { display: inline-flex; align-items: center; gap: 8px; background: none; color: var(--text-secondary); font-size: 13px; font-family: var(--font-body); margin-bottom: 36px; transition: var(--transition); padding: 8px 0; }
+.back-btn:hover { color: var(--primary); }
+
+.id-detail__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 52px; align-items: start; }
+
+.main-image {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  aspect-ratio: 16/10;
+  background: #060606;
+  box-shadow: 0 24px 64px rgba(0,0,0,0.8), 0 0 40px rgba(255, 0, 51, 0.07);
+}
+
+.main-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+.main-image:hover img { transform: scale(1.03); }
+
+.img-placeholder { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 80px; background: linear-gradient(135deg, #0a0505, #120808); }
+
+.sold-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.7); display: flex; align-items: center; justify-content: center; backdrop-filter: blur(2px); }
+
+.image-thumbs { display: flex; gap: 10px; margin-top: 14px; flex-wrap: wrap; }
+
+.thumb { width: 74px; height: 50px; border-radius: var(--radius-sm); overflow: hidden; border: 2px solid transparent; transition: var(--transition); background: none; cursor: pointer; }
+.thumb.active { border-color: var(--primary); box-shadow: 0 0 12px rgba(255, 0, 51, 0.45); }
+.thumb:hover:not(.active) { border-color: rgba(255, 0, 51, 0.35); }
+.thumb img { width: 100%; height: 100%; object-fit: cover; }
+
+.id-detail__category { font-family: var(--font-gaming); font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--primary); margin-bottom: 10px; }
+
+.id-detail__title { font-family: var(--font-gaming); font-size: clamp(1.5rem, 3vw, 2.3rem); margin-bottom: 26px; line-height: 1.2; }
+
+.id-detail__meta { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 28px; }
+
+.meta-item {
+  background: rgba(255, 0, 51, 0.03);
+  border: 1px solid rgba(255, 0, 51, 0.14);
+  border-radius: var(--radius);
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  transition: var(--transition);
+}
+
+.meta-item:hover { border-color: rgba(255, 0, 51, 0.35); background: rgba(255, 0, 51, 0.06); }
+
+.meta-label { font-size: 10px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1.5px; font-family: var(--font-ui); }
+.meta-value { font-family: var(--font-gaming); font-size: 14px; color: var(--text-primary); display: flex; align-items: center; gap: 4px; }
+.mono { font-family: monospace; font-size: 12px; color: var(--text-secondary); }
+
+.id-detail__price { font-family: var(--font-gaming); font-size: 2.6rem; font-weight: 900; color: var(--primary); text-shadow: 0 0 28px var(--primary-glow); margin-bottom: 22px; line-height: 1; }
+
+.id-detail__desc { background: rgba(255, 0, 51, 0.03); border: 1px solid rgba(255, 0, 51, 0.12); border-radius: var(--radius); padding: 18px; margin-bottom: 22px; }
+.id-detail__desc h4 { font-family: var(--font-gaming); font-size: 10px; letter-spacing: 2.5px; color: var(--text-secondary); text-transform: uppercase; margin-bottom: 10px; }
+.id-detail__desc p { color: var(--text-secondary); font-size: 14px; line-height: 1.75; font-family: var(--font-ui); font-weight: 300; }
+
+.id-detail__status { margin-bottom: 22px; }
+.id-detail__actions { display: flex; gap: 12px; margin-bottom: 30px; flex-wrap: wrap; }
+
+/* id-detail__contact is the JSX class — alias to contact-section styles */
+.id-detail__contact,
+.contact-section { background: rgba(255, 0, 51, 0.03); border: 1px solid rgba(255, 0, 51, 0.14); border-radius: var(--radius-lg); padding: 22px; }
+
+.id-detail__contact h4,
+.contact-section h4 { font-family: var(--font-gaming); font-size: 10px; letter-spacing: 2.5px; color: var(--text-secondary); text-transform: uppercase; margin-bottom: 14px; }
+
+.contact-login-prompt { background: rgba(255, 0, 51, 0.04); border: 1px solid rgba(255, 0, 51, 0.15); border-radius: var(--radius); padding: 20px; }
+.contact-login-prompt p { color: var(--text-secondary); font-size: 14px; text-align: center; font-family: var(--font-ui); }
+
+.contact-buttons { display: flex; gap: 12px; flex-wrap: wrap; }
+
+.contact-btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; border-radius: var(--radius); font-family: var(--font-gaming); font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; transition: var(--transition); flex: 1; justify-content: center; min-width: 140px; }
+
+.contact-btn.whatsapp { background: linear-gradient(135deg, #25d366, #1da851); color: #fff; box-shadow: 0 4px 16px rgba(37,211,102,0.25); }
+.contact-btn.whatsapp:hover { transform: translateY(-3px); box-shadow: 0 10px 28px rgba(37,211,102,0.4); }
+
+.contact-btn.instagram { background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); color: #fff; box-shadow: 0 4px 16px rgba(220,39,67,0.25); }
+.contact-btn.instagram:hover { transform: translateY(-3px); box-shadow: 0 10px 28px rgba(220,39,67,0.4); }
+
+.contact-btn.whatsapp-channel { background: linear-gradient(135deg, #075e54, #054d44); color: #fff; box-shadow: 0 4px 16px rgba(7,94,84,0.3); }
+.contact-btn.whatsapp-channel:hover { transform: translateY(-3px); box-shadow: 0 10px 28px rgba(7,94,84,0.5); }
+
+@media (max-width: 768px) {
+  .id-detail { padding: 84px 0 64px; }
+  .id-detail__grid { grid-template-columns: 1fr; gap: 28px; }
+  .id-detail__meta { grid-template-columns: repeat(2, 1fr); }
+  .id-detail__price { font-size: 2.1rem; }
+  .contact-buttons { flex-direction: column; }
+  .contact-btn { justify-content: center; }
+}
+
+@media (max-width: 480px) {
+  .id-detail__meta { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+  .id-detail__actions { flex-direction: column; }
+  .id-detail__actions .btn-primary,
+  .id-detail__actions .btn-outline { width: 100%; justify-content: center; }
+  .image-thumbs { gap: 6px; }
+  .thumb { width: 58px; height: 42px; }
+}

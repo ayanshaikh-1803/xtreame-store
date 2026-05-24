@@ -1,0 +1,203 @@
+/* ─── IDCard v6.0 (Ultra Dark Premium Red) ───────────────────────────────── */
+
+.id-card {
+  display: block;
+  background: rgba(10, 10, 10, 0.92);
+  border: 1px solid rgba(255, 0, 51, 0.14);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: var(--transition);
+  cursor: pointer;
+  position: relative;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.6);
+}
+
+.id-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255, 0, 51, 0.025) 0%, transparent 50%);
+  pointer-events: none;
+  border-radius: inherit;
+  z-index: 1;
+}
+
+.id-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255, 0, 51, 0.06) 0%, transparent 65%);
+  opacity: 0;
+  transition: opacity 0.35s;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.id-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(255, 0, 51, 0.38);
+  box-shadow: 0 0 50px rgba(255, 0, 51, 0.18), 0 20px 60px rgba(0,0,0,0.8);
+}
+
+.id-card:hover::before { opacity: 1; }
+
+.id-card--sold { opacity: 0.55; }
+.id-card--sold:hover { transform: translateY(-3px); }
+
+/* ─── Image ──────────────────────────────────────────────────────────────── */
+.id-card__image {
+  position: relative;
+  aspect-ratio: 16/10;
+  overflow: hidden;
+  background: #060606;
+}
+
+.id-card__image img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 0.55s cubic-bezier(0.4,0,0.2,1);
+}
+
+.id-card:hover .id-card__image img { transform: scale(1.1); }
+
+.id-card__placeholder {
+  width: 100%; height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 46px;
+  background: linear-gradient(135deg, #0a0505, #120808);
+}
+
+.id-card__image::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 50%;
+  background: linear-gradient(to top, rgba(10, 10, 10, 0.9), transparent);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ─── Badges ─────────────────────────────────────────────────────────────── */
+.id-card__badges {
+  position: absolute;
+  top: 10px; left: 10px;
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  z-index: 3;
+}
+
+.badge-featured {
+  background: linear-gradient(135deg, rgba(255, 0, 51, 0.95), rgba(204, 0, 40, 0.95));
+  color: #fff;
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+  font-size: 9px;
+  font-weight: 700;
+  font-family: var(--font-gaming);
+  letter-spacing: 1.5px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 12px rgba(255, 0, 51, 0.5);
+}
+
+/* ─── Overlay Actions ────────────────────────────────────────────────────── */
+.id-card__overlay {
+  position: absolute;
+  top: 10px; right: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  opacity: 0;
+  transform: translateX(10px);
+  transition: var(--transition);
+  z-index: 3;
+}
+
+.id-card:hover .id-card__overlay { opacity: 1; transform: translateX(0); }
+
+.card-action-btn {
+  width: 36px; height: 36px;
+  border-radius: var(--radius-sm);
+  background: rgba(3, 3, 3, 0.9);
+  border: 1px solid rgba(255, 0, 51, 0.28);
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  transition: var(--transition);
+  backdrop-filter: blur(12px);
+}
+
+.card-action-btn:hover {
+  background: var(--primary);
+  border-color: var(--primary);
+  box-shadow: 0 4px 20px rgba(255, 0, 51, 0.55);
+  transform: scale(1.12);
+}
+
+.card-action-btn.wishlisted {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+  box-shadow: 0 2px 12px rgba(255, 0, 51, 0.45);
+}
+
+/* ─── Info ───────────────────────────────────────────────────────────────── */
+.id-card__info { padding: 14px 16px 16px; position: relative; z-index: 2; }
+
+.id-card__category {
+  font-family: var(--font-gaming);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.id-card__title {
+  font-family: var(--font-gaming);
+  font-size: 13px;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  letter-spacing: 0.5px;
+}
+
+.id-card__stats {
+  display: flex;
+  gap: 10px;
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+  font-family: var(--font-ui);
+}
+
+.id-card__stats span { display: flex; align-items: center; gap: 3px; }
+
+.id-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid rgba(255, 0, 51, 0.1);
+  padding-top: 10px;
+}
+
+.id-card__price {
+  font-family: var(--font-gaming);
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--primary);
+  text-shadow: 0 0 16px rgba(255, 0, 51, 0.5);
+}
+
+.id-card__uid {
+  font-size: 10px;
+  color: var(--text-muted);
+  font-family: monospace;
+  letter-spacing: 0.5px;
+}

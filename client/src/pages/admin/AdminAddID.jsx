@@ -5,7 +5,7 @@ import toast from 'react-hot-toast';
 import { FiUpload, FiX, FiArrowLeft, FiMove } from 'react-icons/fi';
 import './Admin.css';
 
-const RANKS      = ['Bronze', 'Silver', 'Gold', 'Platinum', 'Diamond', 'Heroic', 'Grandmaster'];
+const RANKS = ['Bronze', 'Silver', 'Gold', 'Platinum', 'Diamond', 'Heroic', 'Elite Heroic', 'Master', 'Elite Master', 'Grandmaster'];
 const CATEGORIES = ['Basic ID', 'Normal ID', 'Best ID', 'Super ID', 'Extreme ID'];
 
 const AdminAddID = () => {

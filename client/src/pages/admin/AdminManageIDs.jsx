@@ -5,7 +5,7 @@ import toast from 'react-hot-toast';
 import { FiEdit2, FiTrash2, FiCheckCircle, FiXCircle, FiPlus, FiX, FiSave, FiArrowLeft } from 'react-icons/fi';
 import './Admin.css';
 
-const RANKS    = ['Bronze', 'Silver', 'Gold', 'Platinum', 'Diamond', 'Heroic', 'Grandmaster'];
+const RANKS    = ['Bronze', 'Silver', 'Gold', 'Platinum', 'Diamond', 'Heroic', 'Elite Heroic', 'Master', 'Elite Master', 'Grandmaster'];
 const STATUSES = ['available', 'sold'];
 
 // ─── Edit Modal ───────────────────────────────────────────────────────────────

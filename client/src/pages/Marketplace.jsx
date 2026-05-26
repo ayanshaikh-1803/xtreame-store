@@ -6,7 +6,7 @@ import { FiSearch, FiFilter, FiX } from 'react-icons/fi';
 import './Marketplace.css';
 
 const CATEGORIES = ['Basic ID', 'Normal ID', 'Best ID', 'Super ID', 'Extreme ID'];
-const RANKS = ['Bronze', 'Silver', 'Gold', 'Platinum', 'Diamond', 'Heroic', 'Grandmaster'];
+const RANKS = ['Bronze', 'Silver', 'Gold', 'Platinum', 'Diamond', 'Heroic', 'Elite Heroic', 'Master', 'Elite Master', 'Grandmaster'];
 const SORT_OPTIONS = [
   { value: '', label: 'Newest First' },
   { value: 'price_asc', label: 'Price: Low to High' },

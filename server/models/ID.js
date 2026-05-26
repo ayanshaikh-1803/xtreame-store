@@ -38,7 +38,7 @@ const idSchema = new mongoose.Schema(
     },
     rank: {
       type: String,
-      enum: ['Bronze', 'Silver', 'Gold', 'Platinum', 'Diamond', 'Heroic', 'Grandmaster'],
+      enum: ['Bronze', 'Silver', 'Gold', 'Platinum', 'Diamond', 'Heroic', 'Elite Heroic', 'Master', 'Elite Master', 'Grandmaster'],
       default: 'Bronze'
     },
     description: {

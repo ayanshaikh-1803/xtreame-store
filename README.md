@@ -84,20 +84,20 @@ https://xtreme-store.vercel.app/
 
 ### Home Page
 
-home.png
+./home.png
 
 
 ### Login Page
 
-loging.png
+./loging.png
 
 ### add id
 
-addid.png
+./addid.png
 
 ### Admin Dashboard
 
-admin.png
+./admin.png
 
 ---
 

@@ -3,7 +3,7 @@
 
 ---
 
-## 🚀 Start Karo
+## 🚀 Start 
 
 ### Terminal 1 — Backend
 ```

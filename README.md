@@ -82,22 +82,19 @@ https://xtreme-store.vercel.app/
 
 ## 📸 Screenshots
 
+## 📸 Screenshots
+
 ### Home Page
-
-./home.png
-
+![Home](./home.png)
 
 ### Login Page
+![Login](./login.png)
 
-./loging.png
-
-### add id
-
-./addid.png
+### Add ID Page
+![Add ID](./addid.png)
 
 ### Admin Dashboard
-
-./admin.png
+![Admin](./admin.png)
 
 ---
 

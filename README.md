@@ -88,7 +88,7 @@ https://xtreme-store.vercel.app/
 ![Home](./home.png)
 
 ### Login Page
-![Login](./login.png)
+![Login](./loging.png)
 
 ### Add ID Page
 ![Add ID](./addid.png)

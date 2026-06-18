@@ -1,89 +1,163 @@
 # ⚡ XTREME STORE
-> Premium Free Fire ID Marketplace — Black + Neon Red Gaming Theme
+
+A modern full-stack gaming marketplace platform designed for buying and selling gaming IDs with secure authentication, advanced filtering, wishlist management, admin controls, and cloud-based media storage.
+
+## 🌐 Live Demo
+
+https://xtreme-store.vercel.app/
 
 ---
 
-## 🚀 Start 
+## 🚀 Features
 
-### Terminal 1 — Backend
+### Authentication & Security
+
+* User Registration & Login
+* JWT Authentication
+* Email OTP Verification
+* Forgot Password System
+* Password Encryption (bcrypt)
+* Disposable/Fake Email Detection
+* MX Record Validation
+
+### Marketplace Features
+
+* Browse Gaming IDs
+* Search by Name & UID
+* Category & Price Filters
+* Featured & Trending Listings
+* Wishlist Management
+* Shopping Cart System
+* Detailed Product Pages
+
+### Admin Panel
+
+* Dashboard Analytics
+* Manage Users
+* Add/Edit/Delete IDs
+* Mark IDs as Sold/Available
+* Media Upload Management
+* Platform Statistics
+
+### Media & Storage
+
+* Cloudinary Image Upload
+* Video Upload Support
+* Optimized Media Delivery
+
+---
+
+## 🛠 Tech Stack
+
+### Frontend
+
+* React.js
+* React Router
+* Axios
+
+### Backend
+
+* Node.js
+* Express.js
+
+### Database
+
+* MongoDB Atlas
+
+### Authentication
+
+* JWT
+* bcrypt
+
+### Cloud Services
+
+* Cloudinary
+* Gmail SMTP
+
+### Deployment
+
+* Vercel
+
+---
+
+## 📸 Screenshots
+
+### Home Page
+
+
+
+
+### Login Page
+
+(Add Screenshot Here)
+
+### Product Details
+
+(Add Screenshot Here)
+
+### Admin Dashboard
+
+(Add Screenshot Here)
+
+---
+
+## ⚙️ Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/your-username/xtreame-store.git
 ```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run Backend:
+
+```bash
 cd server
 npm run dev
 ```
 
-### Terminal 2 — Frontend
-```
+Run Frontend:
+
+```bash
 cd client
 npm run dev
 ```
 
-- Backend API: **http://localhost:5000**
-- Frontend: **http://localhost:3000**
-
 ---
 
-## ✅ Completed Features
+## 📂 Project Structure
 
-### 🔐 Auth System
-- Email + Password signup/login
-- Real OTP email verification (Gmail)
-- Fake/disposable email detection (200+ blocked domains)
-- MX record validation
-- Forgot Password (3-step: Email → OTP → New Password)
-- JWT authentication
-- bcrypt password hashing
-- Email OTP with 10min expiry + resend with 60s cooldown
-
-### 🎮 Marketplace
-- All IDs listing with pagination
-- Search by name/UID
-- Filter by Category, Status, Rank, Price range
-- Sort by price, level, views
-- Featured & Trending sections
-- ID Detail page with image/video gallery
-- Add to Cart & Wishlist
-- Contact buttons: WhatsApp, WhatsApp 2, Instagram, WA Channel
-
-### ⚙️ Admin Panel
-- Dashboard with stats + charts
-- Add New ID with all fields
-- Manage IDs (mark sold/available, delete)
-- Upload images & videos (Cloudinary)
-- User management with delete
-- Analytics
-
-### 🆔 ID Fields
-- ID Name + Title
-- UID, Level, Price, Category (auto), Rank
-- Vault Collection, Evo Guns, Evo Max, Total Weapon Skins
-- Rare Items (text)
-- Description
-- WhatsApp 1 & 2, Instagram Link, WhatsApp Channel
-
----
-
-
-- URL: http://localhost:3000/login
-
----
-
-## 📁 Structure
-```
-Xtreme_store/
-├── server/
-│   ├── controllers/     # Auth, Admin, IDs, Cart, Wishlist
-│   ├── middleware/      # JWT auth
-│   ├── models/          # User, ID
-│   ├── routes/          # All API routes
-│   ├── utils/           # Email, Token, Fake Email Validator
-│   └── .env             # Config
-└── client/
-    └── src/
-        ├── pages/       # All pages + Admin panel
-        ├── components/  # Navbar, Footer, IDCard
-        ├── context/     # Auth context
-        └── services/    # API calls
+```text
+XTREME-STORE
+│
+├── client
+│   ├── src
+│   ├── components
+│   ├── pages
+│   └── services
+│
+├── server
+│   ├── controllers
+│   ├── middleware
+│   ├── models
+│   ├── routes
+│   └── utils
+│
+└── README.md
 ```
 
 ---
 
+## 👨‍💻 Developer
+
+Ayan Shaikh
+
+B.Sc. IT (Cyber Security)
+
+GitHub: https://github.com/ayanshaikh-1803
